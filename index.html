@@ -97,7 +97,13 @@
       .footer a {
         color: #ccccff;
       }
-    </style>
+	  
+	  /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+	  div.addthis_toolbox {
+	 	width:180px;
+	 	margin: 0 auto;
+		}    
+ 	</style>
   </head>
   <body>
 
@@ -133,7 +139,7 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product</h1>
+          <h1>Product: Development Version</h1>
         </div>
       </div> 
       <div class="row-fluid subheading">
@@ -150,8 +156,9 @@
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
+          <div class="row-fluid">
+            <div class="span8 offset2">
+            <div class="row-fluid statistics">
               <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
@@ -171,7 +178,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
+        </div>
+        <div class="row-fluid">
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
@@ -180,17 +189,33 @@
               <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
+        </div>
+        <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
+			<a 	class="coinbase-button" data-code="fac0be28d31ef8588becf96331b831b8" 
+				data-button-style="custom_small" href="https://coinbase.com/checkouts/fac0be28d31ef8588becf96331b831b8">Pay With Bitcoin</a>
+				<script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>          
+			</div>
+        </div>
+        <div class="row-fluid">
           <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+			<!-- AddThis Smart Layers BEGIN -->
+			<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+			  <a class="addthis_button_preferred_1"></a>
+			  <a class="addthis_button_preferred_2"></a>
+			  <a class="addthis_button_compact"></a>
+			  <a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5200e91466c6bdff"></script>
+			<script type="text/javascript">
+			 	var addthis_config = {"data_track_addressbar":true};
+			</script>
+			<!-- AddThis Smart Layers END -->
           </div>
+        </div>
         </div>
       </div>
 
@@ -290,5 +315,16 @@
         </div>
       </div>
     </div>
+	<!-- Google Analytics Script starts here -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-42989287-1', 'bitstarter.net');
+	  ga('send', 'pageview');
+	</script>
+	<!-- Google Analytics Script ends here -->
   </body>
 </html>
